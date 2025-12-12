@@ -39,19 +39,21 @@
 
 @layer utilities {
   .animate-in {
-    animation-range: entry 0% entry 100%;
+    /* 移除 animation-range，使用标准动画 */
   }
 
   .fade-in {
     animation-name: fade-in;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
   }
 
   .zoom-in-95 {
     animation-name: zoom-in-95;
     animation-duration: 700ms;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
   }
 
   @keyframes fade-in {

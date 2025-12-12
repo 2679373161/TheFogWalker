@@ -6,7 +6,7 @@ interface DigitalSabbathProps {
 
 export function DigitalSabbath({ onUnlock }: DigitalSabbathProps) {
   return (
-    <div className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center text-stone-500 p-8 animate-in fade-in duration-1000">
+    <div className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center text-stone-500 p-8 animate-in fade-in duration-1000" style={{ width: '100%', height: '100%' }}>
       <div className="max-w-md text-center space-y-12">
         <BookOpen className="w-12 h-12 mx-auto text-stone-800" />
 

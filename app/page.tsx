@@ -16,11 +16,20 @@ export default function TheFogWalker() {
 
   // 模拟安息日模式
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     if (isSabbath) {
       document.body.style.overflow = 'hidden';
     } else {
-          document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
     }
+    
+    // 清理函数
+    return () => {
+      if (typeof window !== 'undefined') {
+        document.body.style.overflow = 'auto';
+      }
+    };
   }, [isSabbath]);
 
   const renderContent = () => {
